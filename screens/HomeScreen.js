@@ -1,17 +1,25 @@
 import React from 'react';
-import{View, Text, StyleSheet, TouchableOpacity} from 'react-native';
- 
-const HomeScreen = () =>{
-    return(
-        <View>
-             <Text
-                 style={{
-                      fontSize: 30,
-                      textAlign: "center",
-                     marginTop: "20%"
-                 }}
-            >Home Screen</Text>
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, StatusBar } from 'react-native';
+
+export default function HomeScreen () {
+    return (
+        <View style={styles.container}>
+
+            <TextInput
+                placeholder="Ingrese ubicación"
+            />
+            <StatusBar style="auto" 
+            />
         </View>
     );
-    }
-export default HomeScreen;
+}
+
+const styles=StyleSheet.create({ 
+    container:{
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    
+  });

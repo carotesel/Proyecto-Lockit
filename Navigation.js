@@ -3,11 +3,12 @@ import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom
 import { NavigationContainer } from '@react-navigation/native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { Ionicons } from '@expo/vector-icons'; 
+import { Octicons } from '@expo/vector-icons'; 
 
 // screens 
 import HomeScreen from "./screens/HomeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
-import StackScreen from "./screens/StackScreen";
+import StackScreen from "./screens/LoginSreen";
 import ProfileScreen from './screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
@@ -25,13 +26,13 @@ function MyTabs() {
             component={HomeScreen}
             options={{
                 tabBarIcon: ({color, size}) => (
-                <MaterialCommunityIcons name="magnify" size={35} color={color} />
+                <Ionicons name="search" size={35} color={color} />
                 ), 
             }}
             />
 
             <Tab.Screen 
-            name="Settings" 
+            name="Lockers" 
             component={SettingsScreen}
             options={{
                 tabBarIcon: ({color, size}) => (
@@ -45,7 +46,7 @@ function MyTabs() {
             component={ProfileScreen} 
             options={{
                 tabBarIcon: ({color, size}) => (
-                    <Ionicons name="person-outline" size={30} color={color}/>
+                    <Octicons name="person" size={30} color={color} />
                 ), 
             }}
             />
